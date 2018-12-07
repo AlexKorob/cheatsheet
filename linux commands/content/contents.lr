@@ -1,8 +1,107 @@
-title: Welcome to Linux Commands!
 ---
 body:
 
-This is a basic demo website that shows how to use Lektor for a basic
-website with some pages.
+<div class='head_of_list'>System Information</div>
+
+* Display Linux system information: <span>uname -a
+* Show how long the system has been running: <span>uptime
+* Display the IP addresses of the host: <span>hostname -I
+* Show the current date and time: <span>date
+* Show this month's calendar: <span>cal
+* Display who is online: <span>w
+* Who you are logged in as: <span>whoami
+
+<div class='head_of_list'>File and Directory Commands</div>
+
+* List all files in a long listing (detailed) format: <span>ls -al
+* Display the present working directory: <span>pwd
+* Create a directory: <span>mkdir directory
+* Remove (delete) file: <span>rm file
+* Remove the directory and its contents recursively: <span>rm -r directory
+* Force removal of file without prompting for confirmation: <span>rm -f file
+* Forcefully remove directory recursively: <span>rm -rf directory
+* Copy file1 to file2: <span>cp file1 file2
+* Copy source_directory recursively to destination. If destination exists, copy source_directory into destination, otherwise create destination with the contents of source_directory: <span>cp -r source_directory destination
+* Rename or move file1 to file2. If file2 is an existing directory, move file1 into directory file2: <span>mv file1 file2
+* Create symbolic link to linkname: <span>ln -s /path/to/file linkname
+* Create an empty file or update the access and modification times of file: <span>touch file
+* View the contents of file: <span>cat file
+* Browse through a text file: <span>less file
+* Display the first 10 lines of file: <span>head file
+* Display the last 10 lines of file: <span>tail file
+* Display the last 10 lines of file and "follow" the file as it grows: <span>tail -f file
+
+
+<div class='head_of_list'>Hardware Information</div>
+
+* Display CPU information: <span>cat /proc/cpuinfo
+* Display memory information: <span>cat /proc/meminfo
+* Display free and used memory ( -h for human readable, -m for MB, -g for GB): <span>free -h
+
+<div class='head_of_list'>Performance monitoring and statistics</div>
+
+* Display and manage the top processes: <span>top
+* Display virtual memory statistics: <span>vmstat 1
+* List files opened by user: <span>lsof -u user
+
+
+<div class='head_of_list'>User Information and Managment</div>
+
+* Display the user and group ids of your current user: <span>id
+* Display the last users who have logged onto the system: <span>last
+* Show who is logged into the system: <span>who
+* Show who is logged in and what they are doing: <span>w
+* Create a group named "test": <span>groupadd test
+* Create an account named john, with a comment of "John Smith" and create the user's home directory: <span>useradd -c "John Smith" -m john
+* Delete the john account: <span>userdel john
+* Add the john account to the test group: <span>usermod -aG test john
+
+
+<div class='head_of_list'>Process Managment</div>
+
+* Display your currently running processes: <span>ps
+* Display all the currently running processes on the system: <span>ps -ef
+* Display process information for processname: <span>ps -ef | grep processname
+* Kill process with process ID of pid: <span>kill pid
+* Kill all processes named processname: <span>killall processname
+* Start program in the background: <span>program &
+* Display stopped or background jobs: <span>bg
+* Brings the most recent background job to foreground: <span>fg
+* Brings job n to the foreground: <span>fg n
+
+<div class='head_of_list'>Network</div>
+
+* Display all network interfaces and ip address: <span> ifconfig -a
+* Display eth0 address and details: <span> ifconfig eth0
+* Query or control network driver and hardware settings: <span> ethtool eth0
+* Send ICMP echo request to host: <span> ping host
+* Display DNS information for domain: <span> dig domain
+* Display DNS ip address for domain: <span> host domain
+* Display the network address of the host name.: <span> hostname -i
+* Display all local ip addresses: <span> hostname -I
+* Display listening tcp and udp ports and corresponding programs: <span> netstat -nutlp
+
+<div class='head_of_list'>Seach</div>
+
+* Search for pattern in file: <span>grep pattern file
+* Search recursively for pattern in directory: <span>grep -r pattern directory
+* Find files and directories by name: <span>locate name
+* Find files in /home/john that start with "prefix": <span>find /home/john -name 'prefix*'
+* Find files larger than 100MB in /home: <span>find /home -size +100M
+
+<div class='head_of_list'>SSH Login</div>
+
+* Connect to host as your local username: <span>ssh host
+* Connect to host as user: <span>ssh user@host
+* Connect to host using port: <span>ssh -p port user@host
+
+<div class='head_of_list'>File Transfers</div>
+
+* Secure copy file.txt to the /tmp folder on server: <span>scp file.txt server:/tmp
+* Copy *.html files from server to the local /tmp folder: <span>scp server:/var/www/*.html /tmp
+* Copy all files and directories recursively from server to the current system's /tmp folder: <span>scp -r server:/var/www /tmp
+* Synchronize /home to /backups/home: <span>rsync -a /home /backups/
+* Synchronize files/directories between the local and remote system with compression enabled: <span>rsync -avz /home server:/backups/
+
 ---
 _discoverable: yes

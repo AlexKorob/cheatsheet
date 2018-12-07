@@ -1,0 +1,106 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./static/style.css">
+<title>Linux Commands</title>
+<body>
+  <header>
+    <h1>Linux Commands</h1>
+  </header>
+  <div class="page">
+    
+  <div class='head_of_list'>System Information</div><ul>
+<li>Display Linux system information: <span>uname -a</li>
+<li>Show how long the system has been running: <span>uptime</li>
+<li>Display the IP addresses of the host: <span>hostname -I</li>
+<li>Show the current date and time: <span>date</li>
+<li>Show this month's calendar: <span>cal</li>
+<li>Display who is online: <span>w</li>
+<li>Who you are logged in as: <span>whoami</li>
+</ul>
+<div class='head_of_list'>File and Directory Commands</div><ul>
+<li>List all files in a long listing (detailed) format: <span>ls -al</li>
+<li>Display the present working directory: <span>pwd</li>
+<li>Create a directory: <span>mkdir directory</li>
+<li>Remove (delete) file: <span>rm file</li>
+<li>Remove the directory and its contents recursively: <span>rm -r directory</li>
+<li>Force removal of file without prompting for confirmation: <span>rm -f file</li>
+<li>Forcefully remove directory recursively: <span>rm -rf directory</li>
+<li>Copy file1 to file2: <span>cp file1 file2</li>
+<li>Copy source_directory recursively to destination. If destination exists, copy source_directory into destination, otherwise create destination with the contents of source_directory: <span>cp -r source_directory destination</li>
+<li>Rename or move file1 to file2. If file2 is an existing directory, move file1 into directory file2: <span>mv file1 file2</li>
+<li>Create symbolic link to linkname: <span>ln -s /path/to/file linkname</li>
+<li>Create an empty file or update the access and modification times of file: <span>touch file</li>
+<li>View the contents of file: <span>cat file</li>
+<li>Browse through a text file: <span>less file</li>
+<li>Display the first 10 lines of file: <span>head file</li>
+<li>Display the last 10 lines of file: <span>tail file</li>
+<li>Display the last 10 lines of file and "follow" the file as it grows: <span>tail -f file</li>
+</ul>
+<div class='head_of_list'>Hardware Information</div><ul>
+<li>Display CPU information: <span>cat /proc/cpuinfo</li>
+<li>Display memory information: <span>cat /proc/meminfo</li>
+<li>Display free and used memory ( -h for human readable, -m for MB, -g for GB): <span>free -h</li>
+</ul>
+<div class='head_of_list'>Performance monitoring and statistics</div><ul>
+<li>Display and manage the top processes: <span>top</li>
+<li>Display virtual memory statistics: <span>vmstat 1</li>
+<li>List files opened by user: <span>lsof -u user</li>
+</ul>
+<div class='head_of_list'>User Information and Managment</div><ul>
+<li>Display the user and group ids of your current user: <span>id</li>
+<li>Display the last users who have logged onto the system: <span>last</li>
+<li>Show who is logged into the system: <span>who</li>
+<li>Show who is logged in and what they are doing: <span>w</li>
+<li>Create a group named "test": <span>groupadd test</li>
+<li>Create an account named john, with a comment of "John Smith" and create the user's home directory: <span>useradd -c "John Smith" -m john</li>
+<li>Delete the john account: <span>userdel john</li>
+<li>Add the john account to the test group: <span>usermod -aG test john</li>
+</ul>
+<div class='head_of_list'>Process Managment</div><ul>
+<li>Display your currently running processes: <span>ps</li>
+<li>Display all the currently running processes on the system: <span>ps -ef</li>
+<li>Display process information for processname: <span>ps -ef | grep processname</li>
+<li>Kill process with process ID of pid: <span>kill pid</li>
+<li>Kill all processes named processname: <span>killall processname</li>
+<li>Start program in the background: <span>program &amp;</li>
+<li>Display stopped or background jobs: <span>bg</li>
+<li>Brings the most recent background job to foreground: <span>fg</li>
+<li>Brings job n to the foreground: <span>fg n</li>
+</ul>
+<div class='head_of_list'>Network</div><ul>
+<li>Display all network interfaces and ip address: <span> ifconfig -a</li>
+<li>Display eth0 address and details: <span> ifconfig eth0</li>
+<li>Query or control network driver and hardware settings: <span> ethtool eth0</li>
+<li>Send ICMP echo request to host: <span> ping host</li>
+<li>Display DNS information for domain: <span> dig domain</li>
+<li>Display DNS ip address for domain: <span> host domain</li>
+<li>Display the network address of the host name.: <span> hostname -i</li>
+<li>Display all local ip addresses: <span> hostname -I</li>
+<li>Display listening tcp and udp ports and corresponding programs: <span> netstat -nutlp</li>
+</ul>
+<div class='head_of_list'>Seach</div><ul>
+<li>Search for pattern in file: <span>grep pattern file</li>
+<li>Search recursively for pattern in directory: <span>grep -r pattern directory</li>
+<li>Find files and directories by name: <span>locate name</li>
+<li>Find files in /home/john that start with "prefix": <span>find /home/john -name 'prefix*'</li>
+<li>Find files larger than 100MB in /home: <span>find /home -size +100M</li>
+</ul>
+<div class='head_of_list'>SSH Login</div><ul>
+<li>Connect to host as your local username: <span>ssh host</li>
+<li>Connect to host as user: <span>ssh user@host</li>
+<li>Connect to host using port: <span>ssh -p port user@host</li>
+</ul>
+<div class='head_of_list'>File Transfers</div><ul>
+<li>Secure copy file.txt to the /tmp folder on server: <span>scp file.txt server:/tmp</li>
+<li>Copy <em>.html files from server to the local /tmp folder: <span>scp server:/var/www/</em>.html /tmp</li>
+<li>Copy all files and directories recursively from server to the current system's /tmp folder: <span>scp -r server:/var/www /tmp</li>
+<li>Synchronize /home to /backups/home: <span>rsync -a /home /backups/</li>
+<li>Synchronize files/directories between the local and remote system with compression enabled: <span>rsync -avz /home server:/backups/</li>
+</ul>
+
+
+  </div>
+  <footer>
+    &copy; Copyright 2018 by Alexandr
+  </footer>
+</body>

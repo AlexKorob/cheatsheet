@@ -1,11 +1,11 @@
 <!doctype html>
 <meta charset="utf-8">
 <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
-<title>{% block title %}Welcome{% endblock %} — Linux Commands</title>
+<title>Linux Commands</title>
 <body>
   <header>
     <h1>Linux Commands</h1>
-    <nav>
+    <!-- <nav>
       <ul class="nav navbar-nav">
         <li{% if this._path == '/' %} class="active"{% endif
           %}><a href="{{ '/'|url }}">Welcome</a></li>
@@ -17,12 +17,12 @@
             %}><a href="{{ href|url }}">{{ title }}</a></li>
         {% endfor %}
       </ul>
-    </nav>
+    </nav> -->
   </header>
   <div class="page">
     {% block body %}{% endblock %}
   </div>
   <footer>
-    &copy; Copyright 2018 by Alexandr,,,.
+    &copy; Copyright 2018 by Alexandr
   </footer>
 </body>
