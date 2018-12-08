@@ -1,0 +1,60 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./static/style.css">
+<title>GIT Commands</title>
+<body>
+  <header>
+    <h1>GIT Commands</h1>
+  </header>
+  <div class="page">
+    
+  <div class='head_of_list'>Make Changes</div><ul>
+<li>Lists all new or modified files to be committed: <span>$ git status</li>
+<li>Snapshots the file in preparation for versioning <span>$ git add [file]</li>
+<li>Unstages the file, but preserve its contents: <span>$ git reset [file]</li>
+<li>Shows file differences not yet staged: <span>$ git diff</li>
+<li>Shows file differences between staging and the last file version: <span>$ git diff --staged</li>
+<li>Records file snapshots permanently in version history: <span>$ git commit -m "[descriptive message]"</li>
+</ul>
+<div class='head_of_list'>Configure Tooling</div><ul>
+<li>Sets the name you want attached to your commit transactions: <span>$ git config --global user.name "[name]"</li>
+<li>Sets the email you want attached to your commit transactions: <span>$ git config --global user.email "[email address]"</li>
+<li>Enables helpful colorization of command line output: <span>$ git config --global color.ui auto</li>
+</ul>
+<div class='head_of_list'>Group Changes</div><ul>
+<li>Lists all local branches in the current repository: <span>$ git branch</li>
+<li>Creates a new branch: <span>$ git branch [branch-name]</li>
+<li>Switches to the specified branch and updates the working directory: <span>$ git checkout [branch-name]</li>
+<li>Combines the specified branch’s history into the current branch: <span>$ git merge [branch]</li>
+<li>Deletes the specified branch: <span>$ git branch -d [branch-name]</li>
+</ul>
+<div class='head_of_list'>Refactor Filenames</div><ul>
+<li>Deletes the file from the working directory and stages the deletion: <span>$ git rm [file]</li>
+<li>Removes the file from version control but preserves the file locally: <span>$ git rm --cached [file]</li>
+<li>Changes the file name and prepares it for commit: <span>$ git mv [file-original] [file-renamed]</li>
+</ul>
+<div class='head_of_list'>Review History</div><ul>
+<li>Lists version history for the current branch: <span>$ git log</li>
+<li>Lists version history for a file, including renames: <span>$ git log --follow [file]</li>
+<li>Shows content differences between two branches: <span>$ git diff [first-branch]...[second-branch]</li>
+<li>Outputs metadata and content changes of the specified commit: <span>$ git show [commit]</li>
+</ul>
+<div class='head_of_list'>Synchronize Changes</div><ul>
+<li>Downloads all history from the repository bookmark: <span>$ git fetch [bookmark]</li>
+<li>Combines bookmark’s branch into current local branch: <span>$ git merge [bookmark]/[branch]</li>
+<li>Uploads all local branch commits to GitHub: <span>$ git push [alias] [branch]</li>
+<li>Downloads bookmark history and incorporates changes: <span>$ git pull</li>
+</ul>
+<div class='head_of_list'>Save Fragments</div><ul>
+<li>Temporarily stores all modified tracked files: <span>$ git stash</li>
+<li>Lists all stashed changesets: <span>$ git stash list</li>
+<li>Restores the most recently stashed files: <span>$ git stash pop</li>
+<li>Discards the most recently stashed changeset: <span>$ git stash drop</li>
+</ul>
+
+
+  </div>
+  <footer>
+    &copy; Copyright 2018 by Alexandr
+  </footer>
+</body>
