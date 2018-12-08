@@ -1,6 +1,56 @@
-title: Welcome to git commands!
 ---
 body:
 
-This is a basic demo website that shows how to use Lektor for a basic
-website with some pages.
+<div class='head_of_list'>Make Changes</div>
+
+* Display Linux system information: <span>$ uname -a
+* Lists all new or modified files to be committed: <span>$ git status
+* Snapshots the file in preparation for versioning <span>$ git add [file]
+* Unstages the file, but preserve its contents: <span>$ git reset [file]
+* Shows file differences not yet staged: <span>$ git diff
+* Shows file differences between staging and the last file version: <span>$ git diff --staged
+* Records file snapshots permanently in version history: <span>$ git commit -m "[descriptive message]"
+
+<div class='head_of_list'>Configure Tooling</div>
+
+* Sets the name you want attached to your commit transactions: <span>$ git config --global user.name "[name]"
+* Sets the email you want attached to your commit transactions: <span>$ git config --global user.email "[email address]"
+* Enables helpful colorization of command line output: <span>$ git config --global color.ui auto
+
+<div class='head_of_list'>Group Changes</div>
+
+* Lists all local branches in the current repository: <span>$ git branch
+* Creates a new branch: <span>$ git branch [branch-name]
+* Switches to the specified branch and updates the working directory: <span>$ git checkout [branch-name]
+* Combines the specified branch’s history into the current branch: <span>$ git merge [branch]
+* Deletes the specified branch: <span>$ git branch -d [branch-name]
+
+<div class='head_of_list'>Refactor Filenames</div>
+
+* Deletes the file from the working directory and stages the deletion: <span>$ git rm [file]
+* Removes the file from version control but preserves the file locally: <span>$ git rm --cached [file]
+* Changes the file name and prepares it for commit: <span>$ git mv [file-original] [file-renamed]
+
+<div class='head_of_list'>Review History</div>
+
+* Lists version history for the current branch: <span>$ git log
+* Lists version history for a file, including renames: <span>$ git log --follow [file]
+* Shows content differences between two branches: <span>$ git diff [first-branch]...[second-branch]
+* Outputs metadata and content changes of the specified commit: <span>$ git show [commit]
+
+<div class='head_of_list'>Synchronize Changes</div>
+
+* Downloads all history from the repository bookmark: <span>$ git fetch [bookmark]
+* Combines bookmark’s branch into current local branch: <span>$ git merge [bookmark]/[branch]
+* Uploads all local branch commits to GitHub: <span>$ git push [alias] [branch]
+* Downloads bookmark history and incorporates changes: <span>$ git pull
+
+<div class='head_of_list'>Save Fragments</div>
+
+* Temporarily stores all modified tracked files: <span>$ git stash
+* Lists all stashed changesets: <span>$ git stash list
+* Restores the most recently stashed files: <span>$ git stash pop
+* Discards the most recently stashed changeset: <span>$ git stash drop
+
+---
+_discoverable: yes
