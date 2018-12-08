@@ -1,0 +1,82 @@
+---
+body:
+
+<div class='head_of_list'>Editing I</div>
+
+* <span>ctrl+[SPACE]</span> Complete code
+* <span>shift+ctrl+/</span> Comment/uncomment code with block comments
+* <span>ctrl+/</span> Comment/uncomment current line or selected block with line comments
+* <span>shift+ctrl+↵</span> Complete Current Statement
+* <span>ctrl+I</span> Implement base interface/class methods in the current class
+* <span>ctrl+O</span> Override base class methods in the current class
+* <span>ctrl+P</span> Show parameters of the method call at caret
+* <span>alt+ctrl+T</span> Surround selected code fragment with if, while, try/catch or other construct
+
+<div class='head_of_list'>Editing II</div>
+
+* <span>alt+ctrl+I</span> Indent current line or selected block according to the code style settings
+* <span>ctrl+C</span> Copy to clipboard
+* <span>ctrl+X</span> Cut to clipboard
+* <span>ctrl+V</span> Paste from clipboard
+* <span>shift+ctrl+V</span> Paste from recent clipboards
+* <span>shift+alt+ctrl+V</span> Paste without formatting, autoimport, literal escaping etc.
+* <span>alt+ctrl+L</span> Reformat code
+* <span>alt+↵</span> Show Intention Actions
+* <span>shift+TAB</span> Unindent Selection
+
+<div class='head_of_list'>Editing III</div>
+
+* <span>ctrl+Y</span>  Delete Line
+* <span>ctrl+DEL</span>  Delete to Word End
+* <span>ctrl+BACKSPACE</span>  Delete to Word Start
+* <span>ctrl+D</span>  Duplicate Line or Block
+* <span>ctrl+=</span>  Expand folding region at caret
+* <span>shift+ctrl+=</span>  Expand all folding regions
+* <span>shift+ctrl+J</span>  Join Lines
+* <span>ctrl+↵ </span> Split Line
+* <span>shift+↵</span> Start New Line
+* <span>alt+ctrl+↵</span>  Start New Line Before Current
+* <span>shift+ctrl+U</span>  Toggle Case
+
+<div class='head_of_list'>Running / Debugging</div>
+
+* <span>shift+F10</span> Run
+* <span>shift+F9</span>  Debug
+* <span>alt+5</span> Activate Debug window
+* <span>shift+alt+F9</span>  Choose and debug configuration
+* <span>alt+F8</span>  Evaluate arbitrary expression
+* <span>F9</span>  Resume program execution
+* <span>shift+ctrl+F10</span>  Run context configuration
+* <span>alt+F9</span>  Run to the line where the caret is
+* <span>shift+alt+F10</span> Choose and run configuration
+* <span>shift+F7</span>  Step into the particular method
+* <span>F7</span>  Step to the next line executed
+* <span>shift+F8</span>  Step to the first line executed after returning from this method
+* <span>F8</span>  Step to the next line in this file
+* <span>shift+ctrl+F8</span> View and manage all breakpoints and watchpoints
+
+<div class='head_of_list'>Navigation</div>
+
+* <span>ctrl+B</span>  Navigate to the declaration of the symbol at caret
+* <span>alt+ctrl+H</span>  Browse call hierarchy for the selected method
+* <span>ctrl+]</span>  Move Caret to Code Block End
+* <span>shift+ctrl+]</span>  Move Caret to Code Block End with Selection
+* <span>ctrl+[</span>  Move Caret to Code Block Start
+* <span>ctrl+0</span>  Go to Bookmark 0
+* <span>ctrl+1</span>  Go to Bookmark 1
+* <span>ctrl+2</span>  Go to Bookmark 2
+* <span>ctrl+3</span>  Go to Bookmark 3
+* <span>ctrl+4</span>  Go to Bookmark 4
+* <span>alt+ctrl+F4</span> Open image in external editor
+* <span>alt+HOME</span>  Jump to Navigation Bar
+* <span>F4</span>  Open editor for the selected item and give focus to it
+* <span>ctrl+E</span>  Show list of recently viewed files
+* <span>shift+ctrl+E</span>  Show list of recently changed files
+* <span>alt+ctrl+HOME</span> Navigate to one of the related or linked files
+* <span>alt+RIGHT</span> Activate next tab
+* <span>shift+alt+RIGHT</span> Select Next Tab in multi-editor file
+* <span>alt+LEFT</span>  Activate previous tab
+* <span>shift+alt+LEFT</span>  Select Previous Tab in multi-editor file
+
+---
+_discoverable: yes
